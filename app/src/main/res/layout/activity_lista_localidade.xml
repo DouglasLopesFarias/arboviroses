@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.ListaLogradouroActivity">
+    tools:context=".view.ListaLocalidadeActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -27,7 +27,7 @@
                     android:orientation="horizontal">
 
                     <EditText
-                        android:id="@+id/edtPesquisarLogradouro"
+                        android:id="@+id/edtPesquisarLocalidade"
                         android:layout_width="247dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -53,13 +53,13 @@
                         android:orientation="vertical">
 
                         <Button
-                            android:id="@+id/btnNovoLogradouro"
+                            android:id="@+id/btnNovoLocalidade"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Novo" />
 
                         <Button
-                            android:id="@+id/btnPesquisarLogradouro"
+                            android:id="@+id/btnPesquisarLocalidade"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Find" />
@@ -74,11 +74,10 @@
             android:orientation="horizontal">
 
             <ListView
-                android:id="@+id/lvLogradouros"
+                android:id="@+id/lvLocalidades"
                 android:layout_width="match_parent"
                 android:layout_height="649dp" />
         </LinearLayout>
     </LinearLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
