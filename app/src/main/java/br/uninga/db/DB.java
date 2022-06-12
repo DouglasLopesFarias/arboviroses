@@ -8,8 +8,13 @@ public class DB extends SQLiteOpenHelper {
 
     public static final String NOME_BANCO = "arboviroses";
     public static final String TBL_BAIRRO = "bairro";
+    public static final String TBL_LOGRADOURO = "logradouro";
 
-    public static final String SCRIPT_TBL_CLIENTES = " create table bairro("+
+    public static final String SCRIPT_TBL_BAIRRO = " create table bairro("+
+            " id string not null primary key, "+
+            " descricao text not null);";
+
+    public static final String SCRIPT_TBL_LOGRADOURO = " create table logradouro("+
             " id string not null primary key, "+
             " descricao text not null);";
 
@@ -19,7 +24,9 @@ public class DB extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(SCRIPT_TBL_CLIENTES);
+        db.execSQL(SCRIPT_TBL_BAIRRO);
+        db.execSQL(SCRIPT_TBL_LOGRADOURO);
+
     }
 
     @Override

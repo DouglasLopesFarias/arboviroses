@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Arboviroses">
         <activity
+            android:name=".view.CadLogradouroActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.ListaLogradouroActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.CadBairroActivity"
             android:exported="false" />
         <activity

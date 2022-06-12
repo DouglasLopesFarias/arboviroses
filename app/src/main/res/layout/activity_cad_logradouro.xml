@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.CadBairroActivity">
+    tools:context=".view.CadLogradouroActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -24,7 +24,7 @@
                 android:text="Id:" />
 
             <EditText
-                android:id="@+id/edtIdBairroCad"
+                android:id="@+id/edtIdLogradouroCad"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -47,7 +47,7 @@
                 android:text="Descrição:" />
 
             <EditText
-                android:id="@+id/edtDescricaoBairroCad"
+                android:id="@+id/edtDescricaoLogradouroCad"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -62,14 +62,14 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/btnSalvarBairro"
+                android:id="@+id/btnSalvarLogradouro"
                 android:layout_width="74dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Salvar" />
 
             <Button
-                android:id="@+id/btnCancelarBairro"
+                android:id="@+id/btnCancelarLogradouro"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

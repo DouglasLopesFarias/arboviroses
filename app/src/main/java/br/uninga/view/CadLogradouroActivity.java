@@ -10,39 +10,40 @@ import android.widget.EditText;
 
 import br.uninga.R;
 import br.uninga.model.Bairro;
+import br.uninga.model.Logradouro;
 import br.uninga.repository.BairroRepository;
+import br.uninga.repository.LogradouroRepository;
 import br.uninga.utils.TagForm;
 
-public class CadBairroActivity extends AppCompatActivity {
-
+public class CadLogradouroActivity extends AppCompatActivity {
 
     Button btnSalvar;
     EditText edtId;
     EditText edtDescricao;
     public static TagForm tagForm;
-    public static Bairro bairro;
+    public static Logradouro logradouro;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cad_bairro);
+        setContentView(R.layout.activity_cad_logradouro);
 
-        edtId         = findViewById(R.id.edtIdBairroCad);
-        edtDescricao  = findViewById(R.id.edtDescricaoBairroCad);
+        edtId         = findViewById(R.id.edtIdLogradouroCad);
+        edtDescricao  = findViewById(R.id.edtDescricaoLogradouroCad);
 
-        btnSalvar = findViewById(R.id.btnSalvarBairro);
+        btnSalvar = findViewById(R.id.btnSalvarLogradouro);
         btnSalvar.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 Log.e("Id: ", edtId.getText().toString());
                 Log.e("Descrição: ", edtDescricao.getText().toString());
-                Bairro bairro = new Bairro();
-                bairro.setId(edtId.getText().toString());
-                bairro.setDescricao(edtDescricao.getText().toString());
-                BairroRepository bairroRepository = BairroRepository.getInstance(CadBairroActivity.this);
+                Logradouro logradouro = new Logradouro();
+                logradouro.setId(edtId.getText().toString());
+                logradouro.setDescricao(edtDescricao.getText().toString());
+                LogradouroRepository logradouroRepository = LogradouroRepository.getInstance(CadLogradouroActivity.this);
                 if(tagForm == TagForm.I){
-                    bairroRepository.inserir(bairro);
+                    logradouroRepository.inserir(logradouro);
                 }else{
-                    bairroRepository.alterar(bairro);
+                    logradouroRepository.alterar(logradouro);
                 }
                 finish();
             }
@@ -51,12 +52,10 @@ public class CadBairroActivity extends AppCompatActivity {
         if (tagForm == TagForm.A){
             preencheCampos();
         }
-
-
     }
 
     public void preencheCampos(){
-        edtId.setText( String.valueOf(bairro.getId()));
-        edtDescricao.setText(bairro.getDescricao());
+        edtId.setText( String.valueOf(logradouro.getId()));
+        edtDescricao.setText(logradouro.getDescricao());
     }
 }
