@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Arboviroses">
         <activity
+            android:name=".view.CadTipoImovelActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.ListaTipoImovelActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.CadLocalidadeActivity"
             android:exported="false" />
         <activity

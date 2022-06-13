@@ -21,6 +21,8 @@ public class CadBairroActivity extends AppCompatActivity {
     EditText edtDescricao;
     public static TagForm tagForm;
     public static Bairro bairro;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +30,7 @@ public class CadBairroActivity extends AppCompatActivity {
 
         edtId         = findViewById(R.id.edtIdBairroCad);
         edtDescricao  = findViewById(R.id.edtDescricaoBairroCad);
+
 
         btnSalvar = findViewById(R.id.btnSalvarBairro);
         btnSalvar.setOnClickListener(new View.OnClickListener(){

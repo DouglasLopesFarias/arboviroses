@@ -10,6 +10,7 @@ public class DB extends SQLiteOpenHelper {
     public static final String TBL_BAIRRO = "bairro";
     public static final String TBL_LOGRADOURO = "logradouro";
     public static final String TBL_LOCALIDADE = "localidade";
+    public static final String TBL_TIPO_DE_IMOVEL = "tipo_imovel";
 
     public static final String SCRIPT_TBL_BAIRRO = " create table bairro("+
             " id string not null primary key, "+
@@ -27,6 +28,11 @@ public class DB extends SQLiteOpenHelper {
             " zona text, "+
             " extrato text not null);";
 
+    public static final String SCRIPT_TBL_TIPO_DE_IMOVEL = " create table tipo_imovel("+
+            " id string not null primary key, "+
+            " sigla text, "+
+            " descricao text not null);";
+
     public DB(Context context){
         super(context, NOME_BANCO, null, 1);
     }
@@ -36,6 +42,7 @@ public class DB extends SQLiteOpenHelper {
         db.execSQL(SCRIPT_TBL_BAIRRO);
         db.execSQL(SCRIPT_TBL_LOGRADOURO);
         db.execSQL(SCRIPT_TBL_LOCALIDADE);
+        db.execSQL(SCRIPT_TBL_TIPO_DE_IMOVEL);
     }
 
     @Override

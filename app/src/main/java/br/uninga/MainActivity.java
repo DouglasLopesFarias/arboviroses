@@ -10,12 +10,15 @@ import android.widget.Button;
 import br.uninga.view.ListaBairroActivity;
 import br.uninga.view.ListaLocalidadeActivity;
 import br.uninga.view.ListaLogradouroActivity;
+import br.uninga.view.ListaTipoImovelActivity;
 
 public class MainActivity extends AppCompatActivity {
 
     Button btnBairro;
     Button btnLogradouro;
     Button btnLocalidade;
+    Button btnTipoImovel;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +48,15 @@ public class MainActivity extends AppCompatActivity {
 
             public void onClick(View v) {
                 Intent intent = new Intent( MainActivity.this, ListaLocalidadeActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnTipoImovel = findViewById(R.id.btnTipoDeImovel);
+        btnTipoImovel.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                Intent intent = new Intent( MainActivity.this, ListaTipoImovelActivity.class);
                 startActivity(intent);
             }
         });

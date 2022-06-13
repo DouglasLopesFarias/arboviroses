@@ -35,7 +35,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="403dp"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <Button
@@ -52,6 +52,28 @@
                 android:layout_weight="1"
                 android:text="Quarteirao" />
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="403dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnTipoDeImovel"
+                android:layout_width="58dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Tipo de Imóvel" />
+
+            <Button
+                android:id="@+id/btnImovel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Imóvel" />
+        </LinearLayout>
+
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

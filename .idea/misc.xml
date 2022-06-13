@@ -6,14 +6,17 @@
         <entry key="..\:/Arboviroses/Projeto/app/src/main/res/layout/activity_cad_bairro.xml" value="0.26510416666666664" />
         <entry key="..\:/Arboviroses/Projeto/app/src/main/res/layout/activity_cad_localidade.xml" value="0.3109375" />
         <entry key="..\:/Arboviroses/Projeto/app/src/main/res/layout/activity_cad_logradouro.xml" value="0.22447916666666667" />
+        <entry key="..\:/Arboviroses/Projeto/app/src/main/res/layout/activity_cad_tipo_imovel.xml" value="0.2703125" />
         <entry key="..\:/Arboviroses/Projeto/app/src/main/res/layout/activity_lista_bairro.xml" value="0.3625" />
         <entry key="..\:/Arboviroses/Projeto/app/src/main/res/layout/activity_lista_localidade.xml" value="0.3109375" />
         <entry key="..\:/Arboviroses/Projeto/app/src/main/res/layout/activity_lista_logradouro.xml" value="0.23854166666666668" />
+        <entry key="..\:/Arboviroses/Projeto/app/src/main/res/layout/activity_lista_tipo_imovel.xml" value="0.2703125" />
         <entry key="..\:/Arboviroses/Projeto/app/src/main/res/layout/activity_main.xml" value="0.3625" />
         <entry key="..\:/Arboviroses/Projeto/app/src/main/res/layout/lista_bairro.xml" value="0.26510416666666664" />
         <entry key="..\:/Arboviroses/Projeto/app/src/main/res/layout/lista_bairros.xml" value="0.26510416666666664" />
         <entry key="..\:/Arboviroses/Projeto/app/src/main/res/layout/lista_localidades.xml" value="0.3109375" />
         <entry key="..\:/Arboviroses/Projeto/app/src/main/res/layout/lista_logradouro.xml" value="0.23854166666666668" />
+        <entry key="..\:/Arboviroses/Projeto/app/src/main/res/layout/lista_tipo_imovel.xml" value="0.4" />
       </map>
     </option>
   </component>
