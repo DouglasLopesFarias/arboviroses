@@ -4,13 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.ListaTipoImovelActivity"
+    tools:context=".view.ListaImovelActivity"
     android:background="@drawable/gradient_background_app">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -24,24 +28,23 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginStart="15dp"
-                android:layout_marginEnd="15dp">
+                android:orientation="horizontal">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:layout_marginStart="15dp">
 
                     <EditText
-                        android:id="@+id/edtPesquisarTipoImovel"
+                        android:id="@+id/edtPesquisarImovel"
                         android:layout_width="247dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:inputType="textPersonName"
+                        android:textColor="@color/white"
                         android:backgroundTint="@color/white"
-                        android:textColor="@color/white"/>
+                        android:inputType="textPersonName" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -59,25 +62,24 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:layout_marginEnd="15dp">
 
                         <Button
-                            android:id="@+id/btnNovoTipoImovel"
+                            android:id="@+id/btnNovoImovel"
                             android:layout_width="match_parent"
                             android:layout_height="40dp"
-                            android:text="Novo"
-                            android:background="@drawable/button_shape_stroke"/>
-
+                            android:background="@drawable/button_shape_stroke"
+                            android:text="Novo" />
                         <Space
-                            android:layout_width="match_parent"
-                            android:layout_height="5dp" />
-
+                            android:layout_width="wrap_content"
+                            android:layout_height="5dp"/>
                         <Button
-                            android:id="@+id/btnPesquisarTipoImovel"
+                            android:id="@+id/btnPesquisarImovel"
                             android:layout_width="match_parent"
                             android:layout_height="40dp"
-                            android:text="Find"
-                            android:background="@drawable/button_shape_stroke"/>
+                            android:background="@drawable/button_shape_stroke"
+                            android:text="Find" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -93,7 +95,7 @@
             android:orientation="horizontal">
 
             <ListView
-                android:id="@+id/lvTipoImovel"
+                android:id="@+id/lvImovels"
                 android:layout_width="match_parent"
                 android:layout_height="649dp"
                 android:layout_marginStart="15dp"

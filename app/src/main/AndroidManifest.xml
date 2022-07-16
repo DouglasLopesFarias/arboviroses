@@ -10,10 +10,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Arboviroses">
         <activity
+            android:name=".ListaQuarteiroesPNCD"
+            android:exported="false" />
+        <activity
+            android:name=".view.ListaImovelActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.CadImovelActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.CadTipoImovelActivity"
             android:exported="false" />
         <activity
             android:name=".view.ListaTipoImovelActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.ListaQuarteiraoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.CadQuarteiraoActivity"
             android:exported="false" />
         <activity
             android:name=".view.CadLocalidadeActivity"

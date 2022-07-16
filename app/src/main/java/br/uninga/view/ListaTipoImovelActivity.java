@@ -23,10 +23,10 @@ import br.uninga.utils.TagForm;
 
 public class ListaTipoImovelActivity extends AppCompatActivity {
 
-
     Button btnNovoTipoImovel;
     TipoDeImovelRepository tipoDeImovelRepository;
     ListView lvTipoImovel;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

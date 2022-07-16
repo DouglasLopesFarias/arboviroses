@@ -15,44 +15,43 @@ import android.widget.ListView;
 import java.util.List;
 
 import br.uninga.R;
-import br.uninga.adapters.BairroAdapter;
-import br.uninga.adapters.LogradouroAdapter;
-import br.uninga.model.Bairro;
-import br.uninga.model.Logradouro;
-import br.uninga.repository.BairroRepository;
-import br.uninga.repository.LogradouroRepository;
+
+import br.uninga.adapters.ImovelAdapter;
+import br.uninga.model.Imovel;
+import br.uninga.repository.ImovelRepository;
+
 import br.uninga.utils.TagForm;
 
-public class ListaLogradouroActivity extends AppCompatActivity {
+public class ListaImovelActivity extends AppCompatActivity {
 
-    Button btnNovoLogradouro;
-    LogradouroRepository logradouroRepository;
-    ListView lvLogradouros;
+    Button btnNovoImovel;
+    ImovelRepository imovelRepository;
+    ListView lvImovels;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lista_logradouro);
+        setContentView(R.layout.activity_lista_imovel);
 
-        logradouroRepository = LogradouroRepository.getInstance(this);
+        imovelRepository = ImovelRepository.getInstance(this);
         atualizaTela();
 
-        lvLogradouros.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        lvImovels.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                final Logradouro logradouro = (Logradouro) parent.getItemAtPosition(position);
+                final Imovel imovel = (Imovel) parent.getItemAtPosition(position);
 
                 AlertDialog alerta;
-                AlertDialog.Builder builder = new AlertDialog.Builder(ListaLogradouroActivity.this);
-                builder.setTitle("Cadastro de Logradouro");
+                AlertDialog.Builder builder = new AlertDialog.Builder(ListaImovelActivity.this);
+                builder.setTitle("Cadastro de Imóvel");
                 builder.setMessage("Selecione uma opção!" );
 
                 builder.setPositiveButton("Alterar".toString(), new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface arg0, int arg1) {
-                        Intent intent = new Intent( ListaLogradouroActivity.this, CadLogradouroActivity.class);
-                        CadLogradouroActivity.tagForm = TagForm.A;
-                        CadLogradouroActivity.logradouro = logradouro;
+                        Intent intent = new Intent( ListaImovelActivity.this, CadImovelActivity.class);
+                        CadImovelActivity.tagForm = TagForm.A;
+                        CadImovelActivity.imovel = imovel;
                         startActivity(intent);
                         atualizaTela();
                     }
@@ -60,7 +59,7 @@ public class ListaLogradouroActivity extends AppCompatActivity {
 
                 builder.setNeutralButton("Excluir".toString(), new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface arg0, int arg1) {
-                        logradouroRepository.remover(logradouro);
+                        imovelRepository.remover(imovel);
                         atualizaTela();
                     }
                 });
@@ -73,12 +72,12 @@ public class ListaLogradouroActivity extends AppCompatActivity {
         });
 
 
-        btnNovoLogradouro = findViewById(R.id.btnNovoLogradouro);
-        btnNovoLogradouro.setOnClickListener(new View.OnClickListener(){
+        btnNovoImovel = findViewById(R.id.btnNovoImovel);
+        btnNovoImovel.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent( ListaLogradouroActivity.this, CadLogradouroActivity.class);
-                CadLogradouroActivity.tagForm = TagForm.I;
+                Intent intent = new Intent( ListaImovelActivity.this, CadImovelActivity.class);
+                CadImovelActivity.tagForm = TagForm.I;
                 startActivity(intent);
             }
         });
@@ -86,10 +85,10 @@ public class ListaLogradouroActivity extends AppCompatActivity {
     }
 
     public void atualizaTela(){
-        List<Logradouro> logradouros = logradouroRepository.getAll();
-        lvLogradouros = findViewById(R.id.lvLogradouro);
-        ArrayAdapter ad = new LogradouroAdapter(this,R.layout.lista_logradouro, logradouros);
-        lvLogradouros.setAdapter(ad);
+        List<Imovel> imovels = imovelRepository.getAll();
+        lvImovels = findViewById(R.id.lvImovels);
+        ArrayAdapter ad = new ImovelAdapter(this,R.layout.lista_imovel, imovels);
+        lvImovels.setAdapter(ad);
     }
 
     @Override

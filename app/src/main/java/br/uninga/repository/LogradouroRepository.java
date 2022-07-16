@@ -89,7 +89,7 @@ public class LogradouroRepository implements IPadraoRepository {
             lista.add(logradouro);
             c.moveToNext();
         }
-        return  new ArrayList(lista);
+        return new ArrayList(lista);
     }
 
     @Override

@@ -2,6 +2,7 @@ package br.uninga.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -15,6 +16,7 @@ import br.uninga.utils.TagForm;
 public class CadTipoImovelActivity extends AppCompatActivity {
 
     Button btnSalvar;
+    Button btnCancelar;
     EditText edtId;
     EditText edtSigla;
     EditText edtDescricao;
@@ -30,13 +32,15 @@ public class CadTipoImovelActivity extends AppCompatActivity {
         edtSigla  = findViewById(R.id.edtSiglaTipoImovelCad);
         edtDescricao  = findViewById(R.id.edtDescricaoTipoImovelCad);
 
-
         btnSalvar = findViewById(R.id.btnSalvarTipoImovel);
+        btnCancelar = findViewById(R.id.btnCancelarTipoImovel);
+
         btnSalvar.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 Log.e("Id: ", edtId.getText().toString());
                 Log.e("Descrição: ", edtDescricao.getText().toString());
+
                 TipoDeImovel tipoDeImovel = new TipoDeImovel();
                 tipoDeImovel.setId(edtId.getText().toString());
                 tipoDeImovel.setSigla(edtSigla.getText().toString());
@@ -47,6 +51,15 @@ public class CadTipoImovelActivity extends AppCompatActivity {
                 }else{
                     tipoDeImovelRepository.alterar(tipoDeImovel);
                 }
+                finish();
+            }
+        });
+
+        btnCancelar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(CadTipoImovelActivity.this, ListaTipoImovelActivity.class);
+                startActivity(intent);
                 finish();
             }
         });

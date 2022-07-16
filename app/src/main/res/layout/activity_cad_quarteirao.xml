@@ -28,18 +28,17 @@
             android:layout_marginEnd="15dp">
 
             <EditText
-                android:id="@+id/edtIdLocalidadeCad"
+                android:id="@+id/edtIdQuarteiraoCad"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
-                android:inputType="textPersonName"
+                android:inputType=""
                 android:hint="Id"
                 android:textColorHint="@color/white"
                 android:textColor="@color/white"
                 android:backgroundTint="@color/white"/>
 
-
         </LinearLayout>
 
         <LinearLayout
@@ -50,35 +49,14 @@
             android:layout_marginEnd="15dp">
 
             <EditText
-                android:id="@+id/edtDescricaoLocalidadeCad"
+                android:id="@+id/edtLocalidadeQuarteiraoCad"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
                 android:inputType=""
+                android:hint="Localidade"
                 android:textColorHint="@color/white"
-                android:hint="Descrição"
-                android:textColor="@color/white"
-                android:backgroundTint="@color/white"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="15dp">
-
-            <EditText
-                android:id="@+id/edtCategoriaLocalidadeCad"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType=""
-                android:textColorHint="@color/white"
-                android:hint="Categoria"
                 android:textColor="@color/white"
                 android:backgroundTint="@color/white"/>
 
@@ -92,14 +70,14 @@
             android:layout_marginEnd="15dp">
 
             <EditText
-                android:id="@+id/edtZonaLocalidadeCad"
+                android:id="@+id/edtNumeroQuarteiraoCad"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textColorHint="@color/white"
                 android:ems="10"
                 android:inputType=""
-                android:hint="Zona"
+                android:textColorHint="@color/white"
+                android:hint="Número"
                 android:textColor="@color/white"
                 android:backgroundTint="@color/white"/>
 
@@ -107,50 +85,49 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="75dp"
+            android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginStart="15dp"
             android:layout_marginEnd="15dp">
 
             <EditText
-                android:id="@+id/edtExtratoLocalidadeCad"
+                android:id="@+id/edtObservacaoQuarteiraoCad"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:hint="Extrato"
+                android:inputType=""
                 android:textColorHint="@color/white"
+                android:hint="Observação"
                 android:textColor="@color/white"
                 android:backgroundTint="@color/white"/>
 
         </LinearLayout>
-
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="61dp"
+            android:orientation="horizontal"
             android:layout_marginStart="15dp"
-            android:layout_marginEnd="15dp"
-            android:orientation="horizontal">
+            android:layout_marginEnd="15dp">
 
             <Button
-                android:id="@+id/btnSalvarLocalidade"
+                android:id="@+id/btnSalvarQuarteirao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/button_shape_stroke"
                 android:text="Salvar"
-                android:layout_marginEnd="15dp"/>
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/button_shape_stroke"/>
 
             <Button
-                android:id="@+id/btnCancelarLocalidade"
+                android:id="@+id/btnCancelarQuarteirao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginStart="15dp"
-                android:background="@drawable/button_shape_stroke"
-                android:text="Cancelar" />
+                android:text="Cancelar"
+                android:background="@drawable/button_shape_stroke"/>
         </LinearLayout>
     </LinearLayout>
 

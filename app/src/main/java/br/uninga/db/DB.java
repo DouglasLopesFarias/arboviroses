@@ -7,10 +7,19 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DB extends SQLiteOpenHelper {
 
     public static final String NOME_BANCO = "arboviroses";
+    public static final String TBL_AGENTE = "agente";
     public static final String TBL_BAIRRO = "bairro";
     public static final String TBL_LOGRADOURO = "logradouro";
     public static final String TBL_LOCALIDADE = "localidade";
+    public static final String TBL_QUARTEIRAO = "quarteirao";
     public static final String TBL_TIPO_DE_IMOVEL = "tipo_imovel";
+    public static final String TBL_IMOVEL = "imovel";
+    public static final String TBL_QUARTEIROES_VISTORIAS ="quarteiroes_vistoria";
+
+
+    public static final String SCRIPT_TBL_AGENTE  = " create table agente("+
+            " id string not null primary key, "+
+            " nome text not null);";
 
     public static final String SCRIPT_TBL_BAIRRO = " create table bairro("+
             " id string not null primary key, "+
@@ -20,7 +29,6 @@ public class DB extends SQLiteOpenHelper {
             " id string not null primary key, "+
             " descricao text not null);";
 
-
     public static final String SCRIPT_TBL_LOCALIDADE = " create table localidade("+
             " id string not null primary key, "+
             " descricao text, "+
@@ -28,10 +36,36 @@ public class DB extends SQLiteOpenHelper {
             " zona text, "+
             " extrato text not null);";
 
+    public static final String SCRIPT_TBL_QUARTEIRAO = " create table quarteirao("+
+            " id string not null primary key, "+
+            " localidade text, "+
+            " numero text, "+
+            " observacao text not null);";
+
     public static final String SCRIPT_TBL_TIPO_DE_IMOVEL = " create table tipo_imovel("+
             " id string not null primary key, "+
             " sigla text, "+
             " descricao text not null);";
+
+    public static final String SCRIPT_TBL_IMOVEL = " create table imovel("+
+            " id string not null primary key, "+
+            " localidade text, "+
+            " quarteirao text, "+
+            " logradouro text, "+
+            " numero text, "+
+            " bairro text, "+
+            " tipoImovel text, "+
+            " complemento text, "+
+            " sequencia text, "+
+            " telefoneResidencial text, "+
+            " telefoneRecado text, "+
+            " observacao text not null);";
+
+    public static final String SCRIPT_TBL_QUARTEIROES_VISTORIA = " create table quarteiroes_vistoria("+
+            " id string not null primary key, "+
+            " localidade text, "+
+            " numero text, "+
+            " observacao text not null);";
 
     public DB(Context context){
         super(context, NOME_BANCO, null, 1);
@@ -42,7 +76,9 @@ public class DB extends SQLiteOpenHelper {
         db.execSQL(SCRIPT_TBL_BAIRRO);
         db.execSQL(SCRIPT_TBL_LOGRADOURO);
         db.execSQL(SCRIPT_TBL_LOCALIDADE);
+        db.execSQL(SCRIPT_TBL_QUARTEIRAO);
         db.execSQL(SCRIPT_TBL_TIPO_DE_IMOVEL);
+        db.execSQL(SCRIPT_TBL_IMOVEL);
     }
 
     @Override

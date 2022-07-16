@@ -2,6 +2,7 @@ package br.uninga.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -18,6 +19,7 @@ import br.uninga.utils.TagForm;
 public class CadLogradouroActivity extends AppCompatActivity {
 
     Button btnSalvar;
+    Button btnCancelar;
     EditText edtId;
     EditText edtDescricao;
     public static TagForm tagForm;
@@ -31,11 +33,13 @@ public class CadLogradouroActivity extends AppCompatActivity {
         edtDescricao  = findViewById(R.id.edtDescricaoLogradouroCad);
 
         btnSalvar = findViewById(R.id.btnSalvarLogradouro);
+        btnCancelar = findViewById(R.id.btnCancelarLogradouro);
         btnSalvar.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 Log.e("Id: ", edtId.getText().toString());
                 Log.e("Descrição: ", edtDescricao.getText().toString());
+
                 Logradouro logradouro = new Logradouro();
                 logradouro.setId(edtId.getText().toString());
                 logradouro.setDescricao(edtDescricao.getText().toString());
@@ -45,6 +49,15 @@ public class CadLogradouroActivity extends AppCompatActivity {
                 }else{
                     logradouroRepository.alterar(logradouro);
                 }
+                finish();
+            }
+        });
+
+        btnCancelar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(CadLogradouroActivity.this, ListaLogradouroActivity.class);
+                startActivity(intent);
                 finish();
             }
         });

@@ -4,14 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_background_app"
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_width="420dp"
-        android:layout_height="727dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp">
+        </Space>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -20,57 +28,124 @@
 
             <Button
                 android:id="@+id/btnBairro"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:background="@drawable/button_shape_stroke"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
                 android:layout_weight="1"
                 android:text="Bairro" />
 
             <Button
                 android:id="@+id/btnLogradouro"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/button_shape_stroke"
                 android:layout_weight="1"
                 android:text="Logradouro" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="67dp"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/btnLocalidade"
-                android:layout_width="90dp"
-                android:layout_height="wrap_content"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:background="@drawable/button_shape_stroke"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
                 android:layout_weight="1"
-                android:text="Localidade" />
+                android:text="localidade" />
 
             <Button
                 android:id="@+id/btnQuarteirao"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:background="@drawable/button_shape_stroke"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
                 android:layout_weight="1"
-                android:text="Quarteirao" />
+                android:text="Quarteirão" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="403dp"
+            android:layout_height="67dp"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/btnTipoDeImovel"
-                android:layout_width="58dp"
-                android:layout_height="wrap_content"
+                android:background="@drawable/button_shape_stroke"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
                 android:layout_weight="1"
                 android:text="Tipo de Imóvel" />
 
             <Button
                 android:id="@+id/btnImovel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:background="@drawable/button_shape_stroke"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
                 android:layout_weight="1"
                 android:text="Imóvel" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnLira"
+                android:background="@drawable/button_shape_stroke"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_weight="1"
+                android:text="LIRA" />
+
+
+            <Button
+                android:id="@+id/btnLia"
+                android:background="@drawable/button_shape_stroke"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_weight="1"
+                android:text="LIA" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnPNCD"
+                android:background="@drawable/button_shape_stroke"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_weight="1"
+                android:text="PNCD" />
+
+
         </LinearLayout>
 
 

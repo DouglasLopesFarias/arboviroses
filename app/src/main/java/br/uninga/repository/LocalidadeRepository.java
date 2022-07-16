@@ -27,8 +27,6 @@ public class LocalidadeRepository implements IPadraoRepository {
         return  instance;
     }
 
-
-
     @Override
     public void inserir(Object o) {
         Localidade localidade = (Localidade) o;

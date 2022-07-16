@@ -2,6 +2,7 @@ package br.uninga.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -15,8 +16,8 @@ import br.uninga.utils.TagForm;
 
 public class CadLocalidadeActivity extends AppCompatActivity {
 
-
     Button btnSalvar;
+    Button btnCancelar;
     EditText edtId;
     EditText edtDescricao;
     EditText edtCategoria;
@@ -36,6 +37,7 @@ public class CadLocalidadeActivity extends AppCompatActivity {
         edtExtrato    = findViewById(R.id.edtExtratoLocalidadeCad);
 
         btnSalvar = findViewById(R.id.btnSalvarLocalidade);
+        btnCancelar = findViewById(R.id.btnCancelarLocalidade);
         btnSalvar.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -49,13 +51,21 @@ public class CadLocalidadeActivity extends AppCompatActivity {
                 localidade.setZona(edtZona.getText().toString());
                 localidade.setExtrato(edtExtrato.getText().toString());
 
-
                 LocalidadeRepository localidadeRepository = LocalidadeRepository.getInstance(CadLocalidadeActivity.this);
                 if(tagForm == TagForm.I){
                     localidadeRepository.inserir(localidade);
                 }else{
                     localidadeRepository.alterar(localidade);
                 }
+                finish();
+            }
+        });
+
+        btnCancelar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(CadLocalidadeActivity.this, ListaLocalidadeActivity.class);
+                startActivity(intent);
                 finish();
             }
         });

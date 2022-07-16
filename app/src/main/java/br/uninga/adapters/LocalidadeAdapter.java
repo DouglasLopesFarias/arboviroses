@@ -10,9 +10,7 @@ import java.util.List;
 
 import br.uninga.R;
 import br.uninga.model.Localidade;
-import br.uninga.model.Logradouro;
 import br.uninga.view.ListaLocalidadeActivity;
-import br.uninga.view.ListaLogradouroActivity;
 
 public class LocalidadeAdapter extends ArrayAdapter {
 

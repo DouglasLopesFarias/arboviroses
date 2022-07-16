@@ -17,7 +17,6 @@ import br.uninga.utils.Funcoes;
 
 public class BairroRepository implements IPadraoRepository {
 
-
     private static final String[] FLD_BAIRRO = {"id", "descricao"};
     public SQLiteDatabase db;
     public static BairroRepository instance = new BairroRepository();
@@ -93,7 +92,6 @@ public class BairroRepository implements IPadraoRepository {
     public Object getById(int id) {
         return null;
     }
-
 
     private Bairro carregar(Cursor c){
         @SuppressLint("Range") String id = c.getString(c.getColumnIndex("id"));
