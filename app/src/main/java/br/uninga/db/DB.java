@@ -65,7 +65,14 @@ public class DB extends SQLiteOpenHelper {
             " id string not null primary key, "+
             " localidade text, "+
             " numero text, "+
+            " id_agente text, "+
+            " id_quarteirao text, "+
             " observacao text not null);";
+
+
+    public static final String SCRIPT_POPULA_BASE = " "+
+            " insert into quarteiroes_vistoria(id, localidade, numero, id_agente, id_quarteirao, observacao)  "+
+            " values('010101', 'localidade 01', '100A', '0101', '0101', 'quarteirao teste'); ";
 
     public DB(Context context){
         super(context, NOME_BANCO, null, 1);
@@ -73,12 +80,15 @@ public class DB extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+        db.execSQL(SCRIPT_TBL_AGENTE);
         db.execSQL(SCRIPT_TBL_BAIRRO);
         db.execSQL(SCRIPT_TBL_LOGRADOURO);
         db.execSQL(SCRIPT_TBL_LOCALIDADE);
         db.execSQL(SCRIPT_TBL_QUARTEIRAO);
         db.execSQL(SCRIPT_TBL_TIPO_DE_IMOVEL);
         db.execSQL(SCRIPT_TBL_IMOVEL);
+        db.execSQL(SCRIPT_TBL_QUARTEIROES_VISTORIA);
+        db.execSQL(SCRIPT_POPULA_BASE);
     }
 
     @Override

@@ -10,9 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Arboviroses">
         <activity
-            android:name=".ListaQuarteiroesPNCD"
-            android:exported="false" />
-        <activity
             android:name=".view.ListaImovelActivity"
             android:exported="false" />
         <activity
@@ -47,6 +44,9 @@
             android:exported="false" />
         <activity
             android:name=".view.ListaBairroActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.ListaQuarteiroesPNCD"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

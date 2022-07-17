@@ -12,6 +12,7 @@ import br.uninga.view.ListaImovelActivity;
 import br.uninga.view.ListaLocalidadeActivity;
 import br.uninga.view.ListaLogradouroActivity;
 import br.uninga.view.ListaQuarteiraoActivity;
+import br.uninga.view.ListaQuarteiroesPNCD;
 import br.uninga.view.ListaTipoImovelActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnQuarteirao;
     Button btnTipoImovel;
     Button btnImovel;
+    Button btnQuarteiroesVisita;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,6 +78,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent( MainActivity.this, ListaImovelActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnQuarteiroesVisita = findViewById(R.id.btnPNCD);
+        btnQuarteiroesVisita.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent( MainActivity.this, ListaQuarteiroesPNCD.class);
                 startActivity(intent);
             }
         });
