@@ -19,6 +19,7 @@ public class DB extends SQLiteOpenHelper {
 
     public static final String SCRIPT_TBL_AGENTE  = " create table agente("+
             " id string not null primary key, "+
+            " email text, "+
             " nome text not null);";
 
     public static final String SCRIPT_TBL_BAIRRO = " create table bairro("+
@@ -70,9 +71,15 @@ public class DB extends SQLiteOpenHelper {
             " observacao text not null);";
 
 
-    public static final String SCRIPT_POPULA_BASE = " "+
-            " insert into quarteiroes_vistoria(id, localidade, numero, id_agente, id_quarteirao, observacao)  "+
-            " values('010101', 'localidade 01', '100A', '0101', '0101', 'quarteirao teste'); ";
+    public static final String SCRIPT_POPULA_BASE = new StringBuilder().append(" ").
+            append(" insert into quarteiroes_vistoria(id, localidade, numero, id_agente, id_quarteirao, observacao) ").
+            append(" values('010101', 'localidade 01', '100A', '0101', '0101', 'quarteirao teste 01 '); ").
+            append(" insert into quarteiroes_vistoria(id, localidade, numero, id_agente, id_quarteirao, observacao) ").
+            append(" values('010102', 'localidade 02', '200A', '0202', '0202', 'quarteirao teste 02 ');  ").
+            append(" insert into quarteiroes_vistoria(id, localidade, numero, id_agente, id_quarteirao, observacao) ").
+            append(" values('010103', 'localidade 03', '300A', '0303', '0303', 'quarteirao teste 03 ');  ").toString();
+
+
 
     public DB(Context context){
         super(context, NOME_BANCO, null, 1);

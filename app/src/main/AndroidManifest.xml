@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Arboviroses">
         <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.ListaImovelActivity"
             android:exported="false" />
         <activity
