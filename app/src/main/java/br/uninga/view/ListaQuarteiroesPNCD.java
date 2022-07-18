@@ -49,17 +49,8 @@ public class ListaQuarteiroesPNCD extends AppCompatActivity {
 
                 builder.setPositiveButton("Abrir lista de imoveis".toString(), new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface arg0, int arg1) {
-                        //Intent intent = new Intent( ListaQuarteiroesPNCD.this, CadBairroActivity.class);
-                        //CadBairroActivity.tagForm = TagForm.A;
-                        //CadBairroActivity.bairro = bairro;
-                        //startActivity(intent);
-                        atualizaTela();
-                    }
-                });
-
-                builder.setNeutralButton("Excluir".toString(), new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface arg0, int arg1) {
-                        quarteiroesVistoriaRepository.remover(quarteiroesVistoria);
+                        Intent intent = new Intent( ListaQuarteiroesPNCD.this, ListaPNCDActivity.class);
+                        startActivity(intent);
                         atualizaTela();
                     }
                 });

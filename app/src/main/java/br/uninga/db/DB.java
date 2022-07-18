@@ -15,11 +15,13 @@ public class DB extends SQLiteOpenHelper {
     public static final String TBL_TIPO_DE_IMOVEL = "tipo_imovel";
     public static final String TBL_IMOVEL = "imovel";
     public static final String TBL_QUARTEIROES_VISTORIAS ="quarteiroes_vistoria";
+    public static final String TBL_TELACAD_PNCD = "TelaCadPNCD";
 
 
     public static final String SCRIPT_TBL_AGENTE  = " create table agente("+
             " id string not null primary key, "+
             " email text, "+
+            " senha text, "+
             " nome text not null);";
 
     public static final String SCRIPT_TBL_BAIRRO = " create table bairro("+
@@ -70,15 +72,60 @@ public class DB extends SQLiteOpenHelper {
             " id_quarteirao text, "+
             " observacao text not null);";
 
+    public static final String SCRIPT_TBL_TELACAD_PNCD = " create table TelaCadPNCD(" +
+            " id string not null primary key, " +
+            " data text, " +
+            " hora text, " +
+            " a1 text, " +
+            " a2 text, " +
+            " b text, " +
+            " c text, " +
+            " d1 text, " +
+            " d2 text, " +
+            " e text, " +
+            " tipo01 text, " +
+            " quantidade01 text, " +
+            " tipo02 text, " +
+            " quantidade02 text, " +
+            " tipodeImovel text, " +
+            " numero text, " +
+            " complemento text, " +
+            " sequencia text, " +
+            " numerodeMoradores text, " +
+            " telefoneResidencial text, " +
+            " telefoneRecado text, " +
+            " nomeMorador text, " +
+            " cpf text, " +
+            " dataNascimento text, " +
+            " numerodoCartaoSus text not null);";
 
-    public static final String SCRIPT_POPULA_BASE = new StringBuilder().append(" ").
-            append(" insert into quarteiroes_vistoria(id, localidade, numero, id_agente, id_quarteirao, observacao) ").
-            append(" values('010101', 'localidade 01', '100A', '0101', '0101', 'quarteirao teste 01 '); ").
-            append(" insert into quarteiroes_vistoria(id, localidade, numero, id_agente, id_quarteirao, observacao) ").
-            append(" values('010102', 'localidade 02', '200A', '0202', '0202', 'quarteirao teste 02 ');  ").
-            append(" insert into quarteiroes_vistoria(id, localidade, numero, id_agente, id_quarteirao, observacao) ").
-            append(" values('010103', 'localidade 03', '300A', '0303', '0303', 'quarteirao teste 03 ');  ").toString();
 
+    public static final String SCRIPT_POPULA_BASE1 = new StringBuilder().append(" ").
+            append(" insert into quarteiroes_vistoria(id, localidade, numero, id_agente, id_quarteirao, observacao) ").
+            append(" values('010101', 'localidade 01', '100A', '0101', '0101', 'quarteirao teste 01 '); ").toString();
+
+
+    public static final String SCRIPT_POPULA_BASE2 = new StringBuilder().append(" ").
+            append(" insert into quarteiroes_vistoria(id, localidade, numero, id_agente, id_quarteirao, observacao) ").
+            append(" values( '010102', 'localidade 02', '200A', '0202', '0202', 'quarteirao teste 02 ' ); ").toString();
+
+
+    public static final String SCRIPT_POPULA_BASE3 = new StringBuilder().append(" ").
+            append(" insert into quarteiroes_vistoria(id, localidade, numero, id_agente, id_quarteirao, observacao) ").
+            append(" values( '010103', 'localidade 03', '300A', '0303', '0303', 'quarteirao teste 03 ' ); ").toString();
+
+
+    public static final String SCRIPT_POPULA_BASE_AGENTE1 = new StringBuilder().append(" ").
+            append(" insert into agente(id, email,senha, nome) ").
+            append(" values( '010101', 'agente01@sesa.br', '123','agente 01' ); ").toString();
+
+    public static final String SCRIPT_POPULA_BASE_AGENTE2 = new StringBuilder().append(" ").
+            append(" insert into agente(id, email,senha, nome) ").
+            append(" values( '010102', 'agente02@sesa.br', '123','agente 02' ); ").toString();
+
+    public static final String SCRIPT_POPULA_BASE_AGENTE3 = new StringBuilder().append(" ").
+            append(" insert into agente(id, email, senha, nome) ").
+            append(" values( '010103', 'agente03@sesa.br', '123', 'agente 03' ); ").toString();
 
 
     public DB(Context context){
@@ -95,7 +142,13 @@ public class DB extends SQLiteOpenHelper {
         db.execSQL(SCRIPT_TBL_TIPO_DE_IMOVEL);
         db.execSQL(SCRIPT_TBL_IMOVEL);
         db.execSQL(SCRIPT_TBL_QUARTEIROES_VISTORIA);
-        db.execSQL(SCRIPT_POPULA_BASE);
+        db.execSQL(SCRIPT_POPULA_BASE1);
+        db.execSQL(SCRIPT_POPULA_BASE2);
+        db.execSQL(SCRIPT_POPULA_BASE3);
+        db.execSQL(SCRIPT_POPULA_BASE_AGENTE1);
+        db.execSQL(SCRIPT_POPULA_BASE_AGENTE2);
+        db.execSQL(SCRIPT_POPULA_BASE_AGENTE3);
+        db.execSQL(SCRIPT_TBL_TELACAD_PNCD);
     }
 
     @Override

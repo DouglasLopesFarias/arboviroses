@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.CadPNCDActivity"
+    android:background="@drawable/gradient_background_app">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="5dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="15dp">
+
+                <TextView
+                    android:id="@+id/textView28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Formulário:"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edtIdPNCDCad"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:ems="10"
+                    android:hint="Id"
+                    android:inputType=""
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edtPNCDDataCad"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:ems="10"
+                    android:hint="Data"
+                    android:inputType=""
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edtPNCDHoraCad"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:ems="10"
+                    android:hint="Hora"
+                    android:inputType=""
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="15dp">
+
+                <TextView
+                    android:id="@+id/textView29"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Depósitos Tratados e Inspecionados"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edtPNCDA1Cad"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:ems="10"
+                    android:hint="A1"
+                    android:inputType=""
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edtPNCDA2Cad"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:ems="10"
+                    android:hint="A2"
+                    android:inputType=""
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edtPNCDBCad"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:ems="10"
+                    android:hint="B"
+                    android:inputType=""
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edtPNCDCCad"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:ems="10"
+                    android:hint="C"
+                    android:inputType=""
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edtPNCDD1Cad"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:ems="10"
+                    android:hint="D1"
+                    android:inputType=""
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edtPNCDD2Cad"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:ems="10"
+                    android:hint="D2"
+                    android:inputType=""
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edtPNCDECad"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:ems="10"
+                    android:hint="E"
+                    android:inputType=""
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tratamento Larvicida 01"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="20dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edtPNCDTipo01Cad"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:ems="10"
+                    android:hint="Tipo 01"
+                    android:inputType=""
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edtPNCDQuantidade01Cad"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:ems="10"
+                    android:hint="Quantidade 01"
+                    android:inputType=""
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tratamento Larvicida 02"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edtPNCDTipo02Cad"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:ems="10"
+                    android:hint="Tipo 02"
+                    android:inputType=""
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edtPNCDQuantidade02Cad"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:ems="10"
+                    android:hint="Quantidade 02"
+                    android:inputType=""
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Imóvel Informações Gerais"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edtPNCDTipoDeImovelCad"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:ems="10"
+                    android:hint="Tipo de Imóvel"
+                    android:inputType=""
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edtPNCDComplementoCad"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:ems="10"
+                    android:hint="Complemento"
+                    android:inputType=""
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edtPNCDNumeroCad"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:ems="10"
+                    android:hint="Número"
+                    android:inputType=""
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edtPNCDSequenciaCad"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:ems="10"
+                    android:hint="Sequência"
+                    android:inputType=""
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edtPNCDNumeroDeMoradoresCad"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:ems="10"
+                    android:hint="Número de moradores"
+                    android:inputType=""
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edtPNCDTelefoneResidencialCad"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:ems="10"
+                    android:hint="Telefone Residencial"
+                    android:inputType=""
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edtPNCDTelefoneRecadoCad"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:ems="10"
+                    android:hint="Telefone Recado"
+                    android:inputType=""
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edtPNCDNomeMoradorCad"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:ems="10"
+                    android:hint="Nome do morador"
+                    android:inputType=""
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edtPNCDCPFCad"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:ems="10"
+                    android:hint="CPF"
+                    android:inputType=""
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edtPNCDDataNascimentoCad"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:ems="10"
+                    android:hint="Data de Nascimento"
+                    android:inputType=""
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_marginStart="15dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edtPNCDNumerodoCartaoSusCad"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:ems="10"
+                    android:hint="Número do Cartão Sus"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="61dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnSalvarPNCD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_shape_stroke"
+                    android:text="Salvar" />
+
+                <Button
+                    android:id="@+id/btnCancelarPNCD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_shape_stroke"
+                    android:text="Cancelar" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

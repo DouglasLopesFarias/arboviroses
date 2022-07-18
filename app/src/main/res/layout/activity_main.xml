@@ -143,7 +143,7 @@
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="15dp"
                 android:layout_weight="1"
-                android:text="PNCD" />
+                android:text="PNCD" />1
 
 
         </LinearLayout>

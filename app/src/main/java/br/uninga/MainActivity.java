@@ -11,6 +11,7 @@ import br.uninga.view.ListaBairroActivity;
 import br.uninga.view.ListaImovelActivity;
 import br.uninga.view.ListaLocalidadeActivity;
 import br.uninga.view.ListaLogradouroActivity;
+import br.uninga.view.ListaPNCDActivity;
 import br.uninga.view.ListaQuarteiraoActivity;
 import br.uninga.view.ListaQuarteiroesPNCD;
 import br.uninga.view.ListaTipoImovelActivity;
