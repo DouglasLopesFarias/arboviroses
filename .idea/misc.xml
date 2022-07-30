@@ -41,8 +41,29 @@
         <entry key="..\:/Arboviroses/Projeto/app/src/main/res/layout/lista_logradouro.xml" value="0.23854166666666668" />
         <entry key="..\:/Arboviroses/Projeto/app/src/main/res/layout/lista_quarteirao.xml" value="0.1828125" />
         <entry key="..\:/Arboviroses/Projeto/app/src/main/res/layout/lista_quarteiroes_vistoria.xml" value="0.6" />
+        <entry key="..\:/Arboviroses/vini/arboviroses-douglas/app/src/main/res/layout/activity_lista_pncdactivity.xml" value="0.17447916666666666" />
+        <entry key="..\:/Arboviroses/vini/arboviroses-douglas/app/src/main/res/layout/activity_login.xml" value="0.13854166666666667" />
+        <entry key="..\:/Arboviroses/vini/arboviroses-douglas/app/src/main/res/layout/activity_main.xml" value="0.13854166666666667" />
+        <entry key="..\:/Arboviroses/vini/arboviroses-douglas/app/src/main/res/layout/activity_sincronizar.xml" value="0.22" />
+        <entry key="..\:/Arboviroses/vini/arboviroses-douglas/app/src/main/res/layout/lista_pncd.xml" value="0.17447916666666666" />
         <entry key="..\:/Arboviroses/vini/arboviroses-main/app/src/main/res/layout/activity_lista_quarteiroes_pncd.xml" value="0.21829710144927536" />
         <entry key="..\:/Arboviroses/vini/arboviroses-main/app/src/main/res/layout/activity_main.xml" value="0.13125" />
+        <entry key="..\:/GitHub/arboviroses-douglas/app/src/main/res/drawable/gradient_background_app.xml" value="0.1375" />
+        <entry key="..\:/GitHub/arboviroses-douglas/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1375" />
+        <entry key="..\:/GitHub/arboviroses-douglas/app/src/main/res/layout/activity_cad_bairro.xml" value="0.25" />
+        <entry key="..\:/GitHub/arboviroses-douglas/app/src/main/res/layout/activity_cad_logradouro.xml" value="0.25" />
+        <entry key="..\:/GitHub/arboviroses-douglas/app/src/main/res/layout/activity_cad_pncdactivity.xml" value="0.25" />
+        <entry key="..\:/GitHub/arboviroses-douglas/app/src/main/res/layout/activity_cad_tipo_imovel.xml" value="0.25" />
+        <entry key="..\:/GitHub/arboviroses-douglas/app/src/main/res/layout/activity_lista_bairro.xml" value="0.2947232947232947" />
+        <entry key="..\:/GitHub/arboviroses-douglas/app/src/main/res/layout/activity_lista_imovel.xml" value="0.176" />
+        <entry key="..\:/GitHub/arboviroses-douglas/app/src/main/res/layout/activity_lista_localidade.xml" value="0.264" />
+        <entry key="..\:/GitHub/arboviroses-douglas/app/src/main/res/layout/activity_lista_logradouro.xml" value="0.16799999999999998" />
+        <entry key="..\:/GitHub/arboviroses-douglas/app/src/main/res/layout/activity_lista_pncdactivity.xml" value="0.4" />
+        <entry key="..\:/GitHub/arboviroses-douglas/app/src/main/res/layout/activity_lista_quarteirao.xml" value="0.25" />
+        <entry key="..\:/GitHub/arboviroses-douglas/app/src/main/res/layout/activity_lista_quarteiroes_pncd.xml" value="0.25" />
+        <entry key="..\:/GitHub/arboviroses-douglas/app/src/main/res/layout/activity_lista_tipo_imovel.xml" value="0.152" />
+        <entry key="..\:/GitHub/arboviroses-douglas/app/src/main/res/layout/lista_quarteiroes_vistoria.xml" value="0.25" />
+        <entry key="..\:/GitHub/arboviroses-douglas/app/src/main/res/menu/pesquisar.xml" value="0.24895833333333334" />
       </map>
     </option>
   </component>

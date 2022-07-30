@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="br.uninga">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,36 +10,68 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Arboviroses">
-
-        <activity android:name=".view.ListaImovelActivity" android:exported="false" />
-        <activity android:name=".view.CadImovelActivity"   android:exported="false" />
-        <activity android:name=".view.CadTipoImovelActivity" android:exported="false" />
-        <activity android:name=".view.ListaTipoImovelActivity" android:exported="false" />
-        <activity android:name=".view.ListaQuarteiraoActivity" android:exported="false" />
-        <activity android:name=".view.CadQuarteiraoActivity" android:exported="false" />
-        <activity android:name=".view.CadLocalidadeActivity" android:exported="false" />
-        <activity android:name=".view.ListaLocalidadeActivity" android:exported="false" />
-        <activity android:name=".view.CadLogradouroActivity" android:exported="false" />
-        <activity android:name=".view.ListaLogradouroActivity" android:exported="false" />
-        <activity android:name=".view.CadBairroActivity" android:exported="false" />
-        <activity android:name=".view.ListaBairroActivity" android:exported="false" />
-        <activity android:name=".view.ListaQuarteiroesPNCD" android:exported="false" />
-        <activity android:name=".view.ListaPNCDActivity" android:exported="false" />
-        <activity android:name=".view.CadPNCDActivity" android:exported="false" />
-
-
-        <activity android:name=".MainActivity" android:exported="false" />
-
-        <activity android:name=".LoginActivity" android:exported="true">
-
+        <activity
+            android:name=".view.SincronizarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.ListaImovelActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.CadImovelActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.CadTipoImovelActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.ListaTipoImovelActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.ListaQuarteiraoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.CadQuarteiraoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.CadLocalidadeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.ListaLocalidadeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.CadLogradouroActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.ListaLogradouroActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.CadBairroActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.ListaBairroActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.ListaQuarteiroesPNCD"
+            android:exported="false" />
+        <activity
+            android:name=".view.ListaPNCDActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.CadPNCDActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-
-
     </application>
 
 </manifest>

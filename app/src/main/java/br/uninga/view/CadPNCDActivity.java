@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import br.uninga.R;
 import br.uninga.model.CadPNCD;
 import br.uninga.repository.CadPNCDRepository;
+import br.uninga.utils.Funcoes;
 import br.uninga.utils.TagForm;
 
 
@@ -113,6 +114,7 @@ public class CadPNCDActivity extends AppCompatActivity {
 
                 CadPNCDRepository cadPNCDRepository = CadPNCDRepository.getInstance(CadPNCDActivity.this);
                 if (tagForm == TagForm.I) {
+                    cadPNCD.setId(Funcoes.getUUID());
                     cadPNCDRepository.inserir(cadPNCD);
                 } else {
                     cadPNCDRepository.alterar(cadPNCD);

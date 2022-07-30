@@ -35,7 +35,7 @@ public class CadPNCDRepository implements IPadraoRepository{
         db.beginTransaction();
         try{
             ContentValues cv = new ContentValues();
-            cv.put("id", Funcoes.getUUID());
+            cv.put("id", cadPNCD.getId());
             cv.put("data", cadPNCD.getData());
             cv.put("hora", cadPNCD.getHora());
             cv.put("a1", cadPNCD.getA1());
@@ -131,6 +131,16 @@ public class CadPNCDRepository implements IPadraoRepository{
             c.moveToNext();
         }
         return new ArrayList(lista);
+    }
+
+    public void salvar(Object o){
+        CadPNCD cadPNCD = (CadPNCD)o;
+        List<CadPNCD> lista = getAll();
+        if (lista.contains(cadPNCD)){
+            alterar(cadPNCD);
+        }else{
+            inserir(cadPNCD);
+        }
     }
 
     @Override

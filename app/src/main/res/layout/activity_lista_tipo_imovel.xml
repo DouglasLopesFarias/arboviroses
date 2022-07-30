@@ -31,18 +31,7 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                    <EditText
-                        android:id="@+id/edtPesquisarTipoImovel"
-                        android:layout_width="247dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:ems="10"
-                        android:inputType="textPersonName"
-                        android:backgroundTint="@color/white"
-                        android:textColor="@color/white"/>
-                </LinearLayout>
+                    android:orientation="horizontal"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -59,26 +48,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="vertical">
-
-                        <Button
-                            android:id="@+id/btnNovoTipoImovel"
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:text="Novo"
-                            android:background="@drawable/button_shape_stroke"/>
-
-                        <Space
-                            android:layout_width="match_parent"
-                            android:layout_height="5dp" />
-
-                        <Button
-                            android:id="@+id/btnPesquisarTipoImovel"
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:text="Find"
-                            android:background="@drawable/button_shape_stroke"/>
-                    </LinearLayout>
+                        android:orientation="vertical"/>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
@@ -100,5 +70,19 @@
                 android:layout_marginEnd="15dp"/>
         </LinearLayout>
     </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fBtn_add8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="25dp"
+        android:clickable="true"
+        android:contentDescription="@string/app_name"
+        android:focusable="true"
+        android:src="@drawable/ic_baseline_add_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

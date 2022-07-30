@@ -3,14 +3,19 @@ package br.uninga.view;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.List;
 
@@ -22,7 +27,7 @@ import br.uninga.utils.TagForm;
 
 public class ListaPNCDActivity extends AppCompatActivity {
 
-    Button btnNovoPNCD;
+    private FloatingActionButton fBtn_add5;
     CadPNCDRepository cadPNCDRepository;
     ListView lvPNCDList;
 
@@ -30,6 +35,9 @@ public class ListaPNCDActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_pncdactivity);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+
         cadPNCDRepository = CadPNCDRepository.getInstance(this);
         atualizaTela();
 
@@ -41,10 +49,10 @@ public class ListaPNCDActivity extends AppCompatActivity {
 
                 AlertDialog alerta;
                 AlertDialog.Builder builder = new AlertDialog.Builder(ListaPNCDActivity.this);
-                builder.setTitle("Cadastro de ...");
+                builder.setTitle("Cadastro de vistoria");
                 builder.setMessage("Selecione uma opção!" );
 
-                builder.setPositiveButton("Alterar".toString(), new DialogInterface.OnClickListener() {
+                builder.setPositiveButton("Vistoriar".toString(), new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface arg0, int arg1) {
                         Intent intent = new Intent( ListaPNCDActivity.this, CadPNCDActivity.class);
                         CadPNCDActivity.tagForm = TagForm.A;
@@ -68,8 +76,8 @@ public class ListaPNCDActivity extends AppCompatActivity {
             }
         });
 
-        btnNovoPNCD = findViewById(R.id.btnNovoPNCD);
-        btnNovoPNCD.setOnClickListener(new View.OnClickListener(){
+        fBtn_add5 = findViewById(R.id.fBtn_add5);
+        fBtn_add5.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent( ListaPNCDActivity.this, CadPNCDActivity.class);
@@ -78,6 +86,22 @@ public class ListaPNCDActivity extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {//inflate do menu
+        getMenuInflater().inflate(R.menu.pesquisar,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {//infate item pesquisar
+
+        if (item.getItemId() == R.id.btnMenu_Busca) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
     public void atualizaTela(){
         List<CadPNCD> cadPNCDS = cadPNCDRepository.getAll();
         lvPNCDList = findViewById(R.id.lvPNCD);

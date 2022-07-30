@@ -16,7 +16,6 @@ import br.uninga.utils.TagForm;
 
 public class CadBairroActivity extends AppCompatActivity {
 
-
     Button btnSalvar;
     Button btnCancelar;
     EditText edtId;

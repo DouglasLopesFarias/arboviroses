@@ -34,18 +34,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
-                    android:layout_marginStart="15dp">
-
-                    <EditText
-                        android:id="@+id/edtPesquisarQuarteiroesVisita"
-                        android:layout_width="247dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:ems="10"
-                        android:textColor="@color/white"
-                        android:backgroundTint="@color/white"
-                        android:inputType="textPersonName" />
-                </LinearLayout>
+                    android:layout_marginStart="15dp"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -63,27 +52,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
-                        android:layout_marginEnd="15dp">
-
-                        <Button
-                            android:id="@+id/btnNovoQuarteiroesVisita"
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:background="@drawable/button_shape_stroke"
-                            android:text="Novo" />
-
-                        <Space
-                            android:layout_width="match_parent"
-                            android:layout_height="5dp" />
-
-                        <Button
-                            android:id="@+id/btnPesquisarQuarteiroesVisita"
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:background="@drawable/button_shape_stroke"
-                            android:text="Find" />
-
-                    </LinearLayout>
+                        android:layout_marginEnd="15dp"/>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
@@ -105,5 +74,19 @@
         </LinearLayout>
 
     </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fBtn_add7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="25dp"
+        android:clickable="true"
+        android:contentDescription="@string/app_name"
+        android:focusable="true"
+        android:src="@drawable/ic_baseline_add_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

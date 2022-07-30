@@ -1,16 +1,21 @@
 package br.uninga.view;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.List;
 
@@ -23,7 +28,7 @@ import br.uninga.utils.TagForm;
 
 public class ListaTipoImovelActivity extends AppCompatActivity {
 
-    Button btnNovoTipoImovel;
+    private FloatingActionButton fBtn_add8;;
     TipoDeImovelRepository tipoDeImovelRepository;
     ListView lvTipoImovel;
 
@@ -31,6 +36,8 @@ public class ListaTipoImovelActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_tipo_imovel);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
 
         tipoDeImovelRepository = TipoDeImovelRepository.getInstance(this);
         atualizaTela();
@@ -71,8 +78,8 @@ public class ListaTipoImovelActivity extends AppCompatActivity {
         });
 
 
-        btnNovoTipoImovel = findViewById(R.id.btnNovoTipoImovel);
-        btnNovoTipoImovel.setOnClickListener(new View.OnClickListener(){
+        fBtn_add8 = findViewById(R.id.fBtn_add8);
+        fBtn_add8.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent( ListaTipoImovelActivity.this, CadTipoImovelActivity.class);
@@ -81,6 +88,21 @@ public class ListaTipoImovelActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {//inflate do menu
+        getMenuInflater().inflate(R.menu.pesquisar,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {//infate item pesquisar
+
+        if (item.getItemId() == R.id.btnMenu_Busca) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     public void atualizaTela(){

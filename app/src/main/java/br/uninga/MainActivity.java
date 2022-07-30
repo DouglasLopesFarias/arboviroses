@@ -15,6 +15,7 @@ import br.uninga.view.ListaPNCDActivity;
 import br.uninga.view.ListaQuarteiraoActivity;
 import br.uninga.view.ListaQuarteiroesPNCD;
 import br.uninga.view.ListaTipoImovelActivity;
+import br.uninga.view.SincronizarActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnTipoImovel;
     Button btnImovel;
     Button btnQuarteiroesVisita;
+    Button btnSincronizar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,6 +90,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent( MainActivity.this, ListaQuarteiroesPNCD.class);
+                startActivity(intent);
+            }
+        });
+
+        btnSincronizar = findViewById(R.id.btnSincronizar);
+        btnSincronizar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent( MainActivity.this, SincronizarActivity.class);
                 startActivity(intent);
             }
         });
